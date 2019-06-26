@@ -1,13 +1,15 @@
-package com.bootExample.demo.javabean;
+package com.bootExample.demo.pojo;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
-
-@Component
-@ConfigurationProperties(prefix="student")
-public class StudentProperties {
+public class Student {
+	private Integer id;
 	private String name;
 	private Integer age;
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}
@@ -20,5 +22,6 @@ public class StudentProperties {
 	public void setAge(Integer age) {
 		this.age = age;
 	}
+	
 
 }
